@@ -720,11 +720,6 @@ paths = identityname.eval(feed_dict={name: testpaths})
 paths = [getlocalpath(str(p[0], 'utf-8')) for p in paths]
 numcomps = identitynum.eval(feed_dict={n: num})
 
-g = open('test-predictions.txt', 'w')	
-for i in range(len(pred)):
-	g.write(str(paths[i]) + "\t" + str(labellst[pred[i]]) + "\n")
-g.close()
-
 f = open('predictions.txt', 'w')
 prev = paths[0]
 for i in range(len(paths)):
